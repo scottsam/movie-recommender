@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Movie Recommendation</h1>
+        <p>Welcome to the Movie Recommendation app! Enter a brief description of
+            a movie you like, and we'll recommend similar movies for you to
+            explore.</p>
+        <form action="/recommend" method="post">
+            <label for="description">Enter a movie description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"
+                placeholder="E.g., 'A group of friends embark on an adventure...'"></textarea><br>
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </div>
+</body>
+
+</html>
